@@ -1,0 +1,27 @@
+=after-text($width)
+    content: ''
+    display: block
+    width: $width
+    height: 1px
+    background-color: $color-main
+    opacity: .2
+    margin-top: 2px
+
+=show-element()
+    animation: show-element .8s ease 3s both
+
+=plyr($backgroundColor, $elementColor, $hoverColor)
+    .plyr--audio 
+        .plyr__controls
+            background-color: $backgroundColor
+            .plyr__control
+                color: $elementColor
+                border-radius: 50%
+                &:hover
+                    background-color: $elementColor
+                    color: $hoverColor
+            .plyr__time--current
+                color: $elementColor
+            .plyr__progress
+                input
+                    color: $elementColor

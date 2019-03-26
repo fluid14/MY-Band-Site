@@ -1,0 +1,191 @@
+.header
+    width: 100%
+    height: 100vh
+    &__nav
+        position: fixed
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        top: -200%
+        width: 100%
+        height: 100vh
+        background-color: $color-second
+        z-index: 1
+        opacity: 0
+        transition: .6s ease
+        z-index: 3
+        +show-element()
+        .header__menu
+            margin-bottom: 20%
+            &-item
+                list-style: none
+                a
+                    text-decoration: none
+                    color: $font-color-second
+                    font-size: 6vw
+                    line-height: 180%
+        &--is-active
+            top: 0
+        .header__player
+            position: fixed
+            top: 0
+            left: 0
+            height: 8vh
+            display: flex
+            flex-direction: row-reverse
+            align-items: center
+            .header__select-song
+                background-color: transparent
+                color: $font-color-main
+                border: none
+                font-size: 10px
+                font-weight: 100
+            +plyr(rgba(255,255,255,0), $color-main, $font-color-second)
+    .header__burger
+        position: fixed
+        top: 20px
+        right: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 6vw
+        width: 8vw
+        max-width: 25px
+        overflow: hidden
+        z-index: 4
+        transition: .6s ease
+        +show-element()
+        .header__inner
+            display: block
+            width: 100%
+            height: 2px
+            opacity: .2
+            margin: 1.5px 0
+            border-radius: 4px
+            background-color: $color-main
+        .header__inner1,
+        .header__inner3
+            transition: .3s ease
+        &--is-active
+            .header__inner
+                background-color: white
+            & .header__inner1
+                transform: translateY(250%)
+            & .header__inner3
+                transform: translateY(-250%)
+    &__logo-container
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        width: auto
+        text-align: center
+        .header__logo
+            width: 50%
+            margin-bottom: 5vh
+            opacity: 0
+            animation: show-logo 1s ease .2s both
+        .header__h1
+            display: block
+            position: relative
+            line-height: 150%
+            letter-spacing: 7px
+            text-transform: uppercase
+            font-size: 5.7vw
+            background-color: $color-background
+            &--fname
+                transform: translateY(100%)
+                z-index: -1
+                animation: logo-text-fname 2s ease .5s both
+        .header__hidden-anim
+            background-color: $color-background
+            animation: logo-hidden-container 2s ease .5s both
+            .header__h1--sname
+                transform: translateY(0)
+                z-index: -2
+                animation: logo-text-sname 2s ease .5s both
+        .header__arrow
+            opacity: 0
+            +show-element()
+            i
+                margin-top: 7vh
+                font-size: 30px
+                color: $font-color-main
+
+@media screen and (orientation: landscape)
+    .header
+        &__nav
+        .header__burger
+            top: 10px
+        &__logo-container
+            .header__logo
+                width: 25%
+                margin-bottom: 3vh
+            .header__h1
+                font-size: 3.7vw
+            .header__arrow
+                i
+                    margin-top: 5vh
+                    font-size: 20px
+
+@media screen and (min-width: $sm-min)
+    .header
+        &__logo-container
+            .header__h1
+                font-size: 4vw
+            .header__arrow
+                i
+                    margin-top: 7vh
+                    font-size: 30px
+
+@media screen and (min-width: $md-min)
+    .header
+        &__nav
+            flex-direction: row
+            justify-content: space-between
+            top: 0
+            height: 8vh
+            background-color: $color-background
+            .header__menu
+                margin-left: 60px
+                width: 40%
+                min-width: 500px
+                margin-bottom: 0
+                &-item
+                    display: inline-block
+                    margin-left: 20px
+                    a
+                        color: $font-color-second
+                        font-size: 20px 
+                        line-height: 180%
+                        color: $font-color-main
+                        &::after
+                            +after-text(0)
+                            transition: .6s ease
+                        &:hover
+                            &::after
+                                width: 80%
+            .header__player 
+                flex-direction: row
+                left: 65%
+                .header__select-song
+                    background-color: $color-background
+                    font-size: 14px
+        .header__burger
+            display: none
+        &__logo-container
+            .header__logo
+                width: 27%
+                margin-bottom: 3.5vh
+            .header__h1
+                font-size: 2.7vw
+            .header__arrow
+                i
+                    margin-top: 7vh
+                    font-size: 30px
+                    transition: .6s ease
+                    &:hover
+                        transform: translateY(-20%)
+
+

@@ -1,0 +1,43 @@
+.contact
+    display: flex
+    flex-direction: column
+    width: 100%
+    background-color: $color-second
+    &__social
+        display: flex
+        justify-content: space-around
+        align-items: center
+        flex-grow: 1
+        order: 2
+        &-link
+            text-decoration: none
+            color: $font-color-second
+            font-size: 30px
+            margin: 10px 0
+            transition: .6s ease
+            &:hover
+                transform: scale(1.1)
+    &__booking
+        flex-grow: 2
+        order: 1
+        .contact__h2
+            text-transform: uppercase
+            color: $font-color-second
+            margin: 0 10px 10px 10px
+            font-size: 30px
+        .contact__p
+            color: $font-color-second
+            margin: 0 0 5px 10px
+            font-size: 20px
+
+@media screen and (min-width: $sm-min)
+    .contact
+        flex-direction: row
+        &__social
+            flex-grow: 2
+            order: 1
+            &-link
+                font-size: 40px
+        &__booking
+            flex-grow: 4
+            order: 2

@@ -1,0 +1,35 @@
+.gallery
+    &__all-photos
+        display: flex
+        flex-wrap: wrap
+        background-color: black
+        a
+            position: relative
+            font-size: 0
+            overflow: hidden
+            width: calc(100% /2)
+            text-decoration: none
+            &:hover .gallery__title
+                bottom: 10%
+            .gallery__title
+                position: absolute
+                font-size: 16px
+                color: $font-color-second
+                z-index: 9999
+                bottom: -100%
+                left: 10%
+                right: 10%
+                transition: .6s ease
+            .gallery__photo
+                width: 100%
+                transition: .6s ease
+                &:hover
+                    transform: scale(1.1)
+                    filter: blur(2px) grayscale(100%)
+
+@media screen and (min-width: $sm-min)
+    .gallery
+        &__all-photos
+            width: 100%
+            a
+                width: calc(100%/5)

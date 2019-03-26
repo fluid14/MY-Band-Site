@@ -1,0 +1,53 @@
+.band
+    width: 100%
+    max-width: 100%
+    &__all-member
+        display: flex
+        flex-direction: column
+        .band__member
+            margin-top: 20px
+            &:hover .band__member-instrument
+                transform: translateY(0)
+            &--without-margin-top
+                margin-top: 0
+            &-photo
+                width: 100%
+                margin-bottom: 20px
+                transition: .6s ease
+                &:hover
+                    transform: scale(1.05)
+            &-name
+                display: inline-block
+                background-color: $color-background
+                &::after
+                    +after-text(100%)
+            &-instrument
+                position: relative
+                transform: translateY(-100%)
+                z-index: -1
+                transition: .6s ease
+                &:hover
+                    transform: translateY(0)
+                &--is-active
+                    transform: translateY(0)
+                
+
+@media screen and (min-width: $sm-min)
+    .band
+        &__all-member
+            flex-direction: row
+            .band__member
+                width: calc(100% /5)
+                margin-top: 0
+                &-photo
+                    width: 100%
+                &-name
+                    font-size: 16px
+                &-instrument
+                    font-size: 16px
+
+@media screen and (min-width: $lg-min)
+    .band
+        max-width: 1367px
+    
+            

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.2/plyr.css" />
+    <!-- build:css -->
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- endbuild -->
+    <title>Zespół MY</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#about">O nas</a></li>
+                <li class="header__menu-item"><a href="#band">Zespół</a></li>
+                <li class="header__menu-item"><a href="#gallery">Galeria</a></li>
+                <li class="header__menu-item"><a href="#contact">Social Media</a></li>
+                <li class="header__menu-item"><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="header__player">
+                <select class="header__select-song" name="song">
+                    <option value="kwasnoslony">Kwaśnosłony</option>
+                    <option value="run">Run</option>
+                    <option value="follow">Follow</option>
+                </select>
+                <audio id="player" controls>
+                    <source id='audio-src' src="./audio/kwasnoslony.mp3" type="audio/mp3" />
+                </audio>
+            </div>
+        </nav>
+        <div class="header__burger opacity">
+            <span class="header__inner header__inner1"></span>
+            <span class="header__inner header__inner2"></span>
+            <span class="header__inner header__inner3"></span>
+        </div>
+        <div class="header__logo-container">
+            <img src="./images/logo.png" alt="Logo zespołu MY" class="header__logo">
+            <h1 class="header__h1 header__h1--fname">Zespół</h1>
+            <div class="header__hidden-anim">
+                <h1 class="header__h1 header__h1--sname">MY</h1>
+            </div>
+            <a href="#about" class="header__arrow"><i class="fas fa-angle-down opacity"></i></a>
+        </div>
+    </header>
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="./images/photos/im6.jpg"></div>
+
+    <section class="about container" id="about">
+        <h2 class="about__h2 section-name">O nas</h2>
+        <p class="about__p paragraf">MY, czyli połączenie pasji, energii i charyzmy podzielone przez pięć. Muzyka,
+            którą tworzymy stanowi wypadkową inspiracji każdego z członków zespołu, czego odzwierciedleniem są elementy
+            wielu, często skrajnych gatunków muzycznych dostrzegalne w twórczości zespołu. Słuchając kolejnych utworów
+            MY można odkryć zarówno wpływy klasycznego rocka, indie, jak i nawiązania do brzmień alternatywnych.</p>
+    </section>
+    <section class="band container container--without-side-padding" id="band">
+        <h2 class="band__h2 section-name">Zespół</h2>
+        <div class="band__all-member">
+            <div class="band__member band__member--without-margin-top">
+                <img src="./images/members/Zuza.jpg" alt="Zdjęcie wokalistka, Zuza Olszewska"
+                    class="band__member-photo">
+                <p class="band__member-name paragraf">Zuza Olszewska</p>
+                <p class="band__member-instrument paragraf" data-inst="Wokal">Wokal</p>
+            </div>
+            <div class="band__member">
+                <img src="./images/members/Kuba.jpg" alt="Zdjęcie gitarzysta, Jakub Dolata" class="band__member-photo">
+                <p class="band__member-name paragraf">Jakub Dolata</p>
+                <p class="band__member-instrument paragraf" data-inst="Gitara">Gitara</p>
+            </div>
+            <div class="band__member">
+                <img src="./images/members/Ryba.jpg" alt="Zdjęcie basista, Jakub Rybak" class="band__member-photo">
+                <p class="band__member-name paragraf">Jakub Rybak</p>
+                <p class="band__member-instrument paragraf" data-inst="Bas">Bas</p>
+            </div>
+            <div class="band__member">
+                <img src="./images/members/Wojtek.jpg" alt="Zdjęcie pianista, Wojtek Ostojski"
+                    class="band__member-photo">
+                <p class="band__member-name paragraf">Wojtek Ostojski</p>
+                <p class="band__member-instrument paragraf" data-inst="Piano">Piano</p>
+            </div>
+            <div class="band__member">
+                <img src="./images/members/Marek.jpg" alt="Zdjęcie perkusista, Marek Skibicki"
+                    class="band__member-photo">
+                <p class="band__member-name paragraf">Marek Skibicki</p>
+                <p class="band__member-instrument paragraf" data-inst="Perkusja">Perkusja</p>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="gallery container container--all-width container--without-side-padding container--without-bottom-margin container--without-bottom-padding"
+        id="gallery">
+        <h2 class="gallery__h2 section-name">Galeria</h2>
+        <div class="gallery__all-photos">
+            <a href="./images/photos/im1.jpg" data-lightbox="MY" data-title="Chata Alchemika - Szamotuły 2018">
+                <p class="gallery__title">Chata Alchemika - Szamotuły 2018</p><img class="gallery__photo"
+                    src="./images/photos/min/im1-min.jpg" alt="Chata Alchemika - Szamotuły 2018">
+            </a>
+            <a href="./images/photos/im2.jpg" data-lightbox="MY" data-title="Nagrania teledysku do utworu Powoli 2017">
+                <p class="gallery__title">Nagrania teledysku do utworu Powoli 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im2-min.jpg" alt="Nagrania teledysku do utworu Powoli 2017">
+            </a>
+            <a href="./images/photos/im3.jpg" data-lightbox="MY" data-title="Nagrania teledysku do utworu Powoli 2017">
+                <p class="gallery__title">Nagrania teledysku do utworu Powoli 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im3-min.jpg" alt="Nagrania teledysku do utworu Powoli 2017">
+            </a>
+            <a href="./images/photos/im4.jpg" data-lightbox="MY" data-title="Polibuda OpenAir 2017">
+                <p class="gallery__title">Polibuda OpenAir 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im4-min.jpg" alt="Polibuda OpenAir 2017">
+            </a>
+            <a href="./images/photos/im5.jpg" data-lightbox="MY" data-title="Polibuda OpenAir 2017">
+                <p class="gallery__title">Polibuda OpenAir 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im5-min.jpg" alt="Polibuda OpenAir 2017">
+            </a>
+            <a href="./images/photos/im6.jpg" data-lightbox="MY" data-title="Nagrania teledysku do utworu Powoli">
+                <p class="gallery__title">Nagrania teledysku do utworu Powoli</p><img class="gallery__photo"
+                    src="./images/photos/min/im6-min.jpg" alt="Nagrania teledysku do utworu Powoli">
+            </a>
+            <a href="./images/photos/im7.jpg" data-lightbox="MY" data-title=""><img class="gallery__photo"
+                    src="./images/photos/min/im7-min.jpg" alt="Mosina Piec 2017"></a>
+            <a href="./images/photos/im8.jpg" data-lightbox="MY"
+                data-title="Mariusz Kwaśniewski Na Żywo - Meskalina 2017">
+                <p class="gallery__title">Mariusz Kwaśniewski Na Żywo - Meskalina 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im8-min.jpg" alt="Mariusz Kwaśniewski Na Żywo - Meskalina 2017">
+            </a>
+            <a href="./images/photos/im9.jpg" data-lightbox="MY"
+                data-title="Przegląd zespołów HighCloud9 - Środa Wlkp 2017">
+                <p class="gallery__title">Przegląd zespołów HighCloud9 - Środa Wlkp 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im9-min.jpg" alt="Przegląd zespołów HighCloud9 - Środa Wlkp 2017">
+            </a>
+            <a href="./images/photos/im10.jpg" data-lightbox="MY" data-title="Support Kasia Kowalska - Integracje 2018">
+                <p class="gallery__title">Support Kasia Kowalska - Integracje 2018</p><img class="gallery__photo"
+                    src="./images/photos/min/im10-min.jpg" alt="Support Kasia Kowalska - Integracje 2018">
+            </a>
+            <a href="./images/photos/im11.jpg" data-lightbox="MY" data-title="Chata Alchemika - Szamotuły 2018">
+                <p class="gallery__title">Chata Alchemika - Szamotuły 2018</p><img class="gallery__photo"
+                    src="./images/photos/min/im11-min.jpg" alt="Chata Alchemika - Szamotuły 2018">
+            </a>
+            <a href="./images/photos/im12.jpg" data-lightbox="MY" data-title="Dni Swarzędza 2017">
+                <p class="gallery__title">Dni Swarzędza 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im12-min.jpg" alt="Dni Swarzędza 2017">
+            </a>
+            <a href="./images/photos/im13.jpg" data-lightbox="MY" data-title="Finał APM 2017 - Klub u Bazyla">
+                <p class="gallery__title">Finał APM 2017 - Klub u Bazyla</p><img class="gallery__photo"
+                    src="./images/photos/min/im13-min.jpg" alt="Finał APM 2017 - Klub u Bazyla">
+            </a>
+            <a href="./images/photos/im14.jpg" data-lightbox="MY" data-title="Polibuda OpenAir 2017">
+                <p class="gallery__title">Polibuda OpenAir 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im14-min.jpg" alt="Polibuda OpenAir 2017">
+            </a>
+            <a href="./images/photos/im15.jpg" data-lightbox="MY" data-title="Powidz Jam Festiwal 2016">
+                <p class="gallery__title">Powidz Jam Festiwal 2016</p><img class="gallery__photo"
+                    src="./images/photos/min/im15-min.jpg" alt="Powidz Jam Festiwal 2016">
+            </a>
+            <a href="./images/photos/im16.jpg" data-lightbox="MY" data-title="Przegląd zespołów Piec - Luboń 2017">
+                <p class="gallery__title">Przegląd zespołów Piec - Luboń 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im16-min.jpg" alt="Przegląd zespołów Piec - Luboń 2017">
+            </a>
+            <a href="./images/photos/im17.jpg" data-lightbox="MY" data-title="Przegląd zespołów Piec - Luboń 2017">
+                <p class="gallery__title">Przegląd zespołów Piec - Luboń 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im17-min.jpg" alt="Przegląd zespołów Piec - Luboń 2017">
+            </a>
+            <a href="./images/photos/im18.jpg" data-lightbox="MY" data-title="Swarzędzka Wiosna Kulturalna 2017">
+                <p class="gallery__title">Swarzędzka Wiosna Kulturalna 2017</p><img class="gallery__photo"
+                    src="./images/photos/min/im18-min.jpg" alt="Swarzędzka Wiosna Kulturalna 2017">
+            </a>
+            <a href="./images/photos/im19.jpg" data-lightbox="MY" data-title="Torzewski Studio 2018">
+                <p class="gallery__title">Torzewski Studio 2018</p><img class="gallery__photo"
+                    src="./images/photos/min/im19-min.jpg" alt="Torzewski Studio 2018">
+            </a>
+            <a href="./images/photos/im20.jpg" data-lightbox="MY" data-title="Torzewski Studio 2018">
+                <p class="gallery__title">Torzewski Studio 2018</p><img class="gallery__photo"
+                    src="./images/photos/min/im20-min.jpg" alt="Torzewski Studio 2018">
+            </a>
+
+        </div>
+    </section>
+
+    <section class="contact container--all-width container--without-side-padding" id="contact">
+        <div class="contact__social">
+            <a href="https://www.facebook.com/totylkomy2/" target="_blank" class="contact__social-link"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/myband_official/?utm_source=ig_profile_share&igshid=52meidfll3dk"
+                target="_blank" class="contact__social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://soundcloud.com/my-band-235680157" target="_blank" class="contact__social-link"><i
+                    class="fab fa-soundcloud"></i></a>
+        </div>
+        <div class="contact__booking">
+            <h2 class="contact__h2">Booking</h2>
+            <p class="contact__p paragraf">Email: totylkomyband@gmail.com</p>
+            <p class="contact__p paragraf">Tel: 730-288-558</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <p class="footer__p paragraf">2019 © MY All rights reserved</p>
+        <p class="footer__p paragraf">Created by Jakub Dolata</p>
+    </footer>
+    <script src="https://cdn.plyr.io/3.5.2/plyr.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- build:js -->
+    <script src="./js/lightbox.js"></script>
+    <script src="./js/parallax.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
