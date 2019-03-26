@@ -76,7 +76,7 @@ gulp.task('babel', () =>
 gulp.task('js', function () {
     return gulp.src(config.jsin)
         .pipe(concat(config.jsoutname))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest(config.jsout));
 });
 
